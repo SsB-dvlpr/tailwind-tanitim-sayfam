@@ -30,8 +30,8 @@ jobs:
 
       - name: Install Tailwind and Build CSS
         run: |
-          npm install -D tailwindcss
-          npx tailwindcss -i input.css -o ./dist/output.css --minify
+          npm install -D tailwindcss @tailwindcss/cli
+          npx @tailwindcss/cli -i style.css -o ./dist/output.css --minify
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
